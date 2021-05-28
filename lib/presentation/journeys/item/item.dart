@@ -1,0 +1,19 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:intl/intl.dart';
+import 'package:qrscan/common/constants/constants.dart';
+import 'package:qrscan/di/get_it.dart';
+import 'package:qrscan/domain/entities/entities.dart';
+import 'package:qrscan/presentation/cubits/login/login_cubit.dart';
+import 'package:qrscan/presentation/cubits/manifestout/manifestout_cubit.dart';
+import 'package:qrscan/presentation/cubits/manifestoutitem/manifestoutitem_cubit.dart';
+import 'package:qrscan/presentation/cubits/manifestouttrack/manifestouttrack_cubit.dart';
+import 'package:qrscan/presentation/cubits/scanqr/scanqr_cubit.dart';
+import 'package:qrscan/presentation/journeys/pages.dart';
+import 'package:qrscan/common/themes/themes.dart';
+import 'package:qrscan/common/extensions/extensions.dart';
+import 'package:supercharged/supercharged.dart';
+
+part 'item_screen.dart';
+part 'item_arguments.dart';
+part 'item_body.dart';
