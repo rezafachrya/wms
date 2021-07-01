@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:qrscan/common/constants/constants.dart';
 import 'package:qrscan/common/extensions/extensions.dart';
@@ -8,3 +10,4 @@ part 'logo.dart';
 part 'button.dart';
 part 'mainpage_menu_widget.dart';
 part 'shimmer_widget.dart';
+part 'loading_animation.dart';

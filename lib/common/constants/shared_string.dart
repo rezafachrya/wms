@@ -24,6 +24,9 @@ class SharedString {
   static const String listofItem = "List of Item";
   static const String description = "Description";
   static const String send = "Send";
+  static const String settings = "Settings";
+  static const String account = "Account";
+  static const String notifications = "Notifications";
 
   static const String updateManifestout = 'Update Manifestout';
   static const String updateManifestoutSuccess = 'Update Manifestout Success';

@@ -5,8 +5,26 @@ class SplashScreen extends StatefulWidget {
   _SplashScreenState createState() => new _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashScreenState extends State<SplashScreen>
+    with TickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _animation;
+
   _startTime() async {
+    // menggunakan ..
+    _controller = AnimationController(
+      duration: const Duration(seconds: 3),
+      vsync: this,
+    )..repeat(reverse: true);
+    _animation =
+        CurvedAnimation(parent: _controller, curve: Curves.fastOutSlowIn);
+    // tanpa ..
+    // _controller = AnimationController(
+    //   duration: const Duration(seconds: 3),
+    //   vsync: this,
+    // );
+    // _controller.repeat(reverse: true);
+
     //ini buat splash Screennya
     await Future.delayed(Duration(seconds: 3));
     BlocProvider.of<AutologinCubit>(context).loadLocalUser();
@@ -14,6 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void dispose() {
+    _controller.dispose();
     super.dispose();
   }
 
@@ -64,7 +83,8 @@ class _SplashScreenState extends State<SplashScreen> {
             color: Colors.grey.withOpacity(0.8),
           ),
           child: Center(
-            child: Image.asset(SharedImage.logoImage),
+            child: FadeTransition(
+                opacity: _animation, child: Image.asset(SharedImage.logoImage)),
           ),
         ),
       ),

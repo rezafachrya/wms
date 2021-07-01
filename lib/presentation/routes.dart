@@ -4,6 +4,7 @@ import 'package:qrscan/presentation/journeys/item/item.dart';
 import 'package:qrscan/presentation/journeys/manifest_list/manifest_list.dart';
 import 'package:qrscan/presentation/journeys/pages.dart';
 import 'package:qrscan/presentation/journeys/scan/scan.dart';
+import 'package:qrscan/presentation/journeys/setting/setting.dart';
 
 import 'journeys/home/home.dart';
 import 'journeys/login/login.dart';
@@ -18,5 +19,6 @@ class Routes {
               arguments: setting.arguments as ItemArguments,
             ),
         RouteList.manifestListScreen: (context) => ManifestListScreen(),
+        RouteList.setting: (context) => SettingScreen(),
       };
 }

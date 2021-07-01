@@ -31,6 +31,9 @@ class ThemeText {
         color: Colors.white,
       );
 
+  static TextStyle? get _whiteHeadline4 => _poppinsTextTheme.headline6
+      ?.copyWith(fontSize: Sizes.dimen_32.sp, color: Colors.white);
+
   static TextStyle? get whiteSubtitle1 => _poppinsTextTheme.subtitle1?.copyWith(
         fontSize: Sizes.dimen_16.sp,
         color: Colors.white,
@@ -60,6 +63,7 @@ class ThemeText {
       );
 
   static getTextTheme() => TextTheme(
+        headline4: _whiteHeadline4,
         headline5: _whiteHeadline5,
         headline6: _whiteHeadLine6,
         subtitle1: whiteSubtitle1,

@@ -33,6 +33,8 @@ Future init() async {
   //General DI / Service Locator
   getItInstance.registerLazySingleton<Connectivity>(() => Connectivity());
   getItInstance.registerLazySingleton<Client>(() => Client());
+  // getItInstance
+  //     .registerLazySingleton<MultipartRequest>(() => MultipartRequest("POST", ));
   getItInstance
       .registerLazySingleton<ApiClient>(() => ApiClient(getItInstance()));
 

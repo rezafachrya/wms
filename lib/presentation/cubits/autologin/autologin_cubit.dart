@@ -27,6 +27,16 @@ class AutologinCubit extends Cubit<AutologinState> {
     );
   }
 
+  //debug state
+  // @override
+  // void onChange(Change<AutologinState> change) {
+  //   print("current: " +
+  //       change.currentState.toString() +
+  //       " next: " +
+  //       change.nextState.toString());
+  //   super.onChange(change);
+  // }
+
   // void deleteUser() async {
   //   await deleteUsers(NoParams());
   // }

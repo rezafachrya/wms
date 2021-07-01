@@ -10,4 +10,5 @@ class RouteList {
   static const String itemScreen = '/itemscreen';
   static const String home = '/home';
   static const String manifestListScreen = '/manifestlistscreen';
+  static const String setting = '/setting';
 }

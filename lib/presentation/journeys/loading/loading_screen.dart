@@ -5,6 +5,7 @@ import 'package:qrscan/common/themes/themes.dart';
 import 'package:qrscan/presentation/cubits/internet/internet_cubit.dart';
 import 'package:qrscan/presentation/cubits/loading/loading_cubit.dart';
 import 'package:qrscan/common/extensions/extensions.dart';
+import 'package:qrscan/presentation/widgets/widgets.dart';
 
 import 'loading_circle.dart';
 
@@ -37,9 +38,11 @@ class LoadingScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: ThemeColor.greyColor.withOpacity(0.8)),
                     child: Center(
-                      child: LoadingCircle(
-                        size: Sizes.dimen_200.w,
-                      ),
+                      child:
+                          // LoadingCircle(
+                          //   size: Sizes.dimen_200.w,
+                          // ),
+                          LoadingAnimation(),
                     ),
                   ),
               ],
